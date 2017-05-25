@@ -48,4 +48,6 @@ contextCSN | grep contextCSN | awk '{print $NF}' | grep -v contextCSN`
                ;;
        esac
  }
-                     
+  
+  [root@nagios-sv plugins]# ./check_ldap -t 60 -H 10.128.0.4 -w "4" -c "6" -b dc=ldap,dc=local -3
+LDAP OK - 0.005 seconds response time|time=0.005346s;4.000000;6.000000;0.000000
